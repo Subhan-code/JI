@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Portal</title>
     <link rel="stylesheet" href="styles.css">
+<style>
+@media (max-width: 600px) {
+    .navbar {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* Ensure a background for visibility */
+    }
+
+    .logo {
+        display: none; /* Hide the left logo on mobile */
+    }
+ .navbar-center{
+    margin-left: -100px;
+ }
+   
+    .account-icon {
+        width: 30px; /* Smaller size for the account icon */
+        height: 30px;
+        order: 2; /* Move the account logo to the right */
+    }
+
+   
+}
+</style>
 </head>
 <body>
     <!-- Navbar -->
@@ -18,7 +44,7 @@
         </div>
         
             <div class="navbar-right">
-                <img src="https://img.icons8.com/?size=100&id=2oRq7VXjDba7&format=png&color=000000" 
+                <img src="su.gif" 
                      alt="Account" 
                      id="account-image" 
                      class="account-image">
