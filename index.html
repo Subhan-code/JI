@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="OPNEXT.png" alt="Logo" class="logo">
+        </div>
+        <div class="navbar-center">
+            <button class="nav-button" id="job-button">Job</button>
+            <button class="nav-button" id="internship-button">Internship</button>
+        </div>
+        
+            <div class="navbar-right">
+                <img src="https://img.icons8.com/?size=100&id=2oRq7VXjDba7&format=png&color=000000" 
+                     alt="Account" 
+                     id="account-image" 
+                     class="account-image">
+            </div>
+        
+    </div>
+
+<!-- Sidebar Content -->
+<div class="sidebar hidden" id="account-sidebar">
+    <button class="close-btn">✖</button>
+    <div class="profile-section">
+        <img id="profile-pic" src="https://img.icons8.com/?size=100&id=2oRq7VXjDba7&format=png&color=000000" 
+             alt="Profile Picture" 
+             class="profile-pic">
+        <input type="file" id="upload-pic" class="hidden">
+        <button class="edit-dp-btn">Edit Profile Picture</button>
+    </div>
+    <div class="user-details">
+        <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
+        <p><strong>Email:</strong> <span id="user-email">john.doe@example.com</span></p>
+        <p><strong>Skills:</strong> <span id="user-skills">JavaScript, React, Node.js</span></p>
+        <button class="edit-btn">Edit Details</button>
+    </div>
+    <form id="edit-form-details" class="hidden">
+        <label for="name">Name:</label>
+        <input type="text" id="name" value="John Doe">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="john.doe@example.com">
+        <br>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" value="JavaScript, React, Node.js">
+        <br>
+        <button type="submit" class="submit-btn">Save Changes</button>
+    </form>
+</div>
+    <!-- Content Sections -->
+    <div id="job-content" class="content-section">
+        <h1>Job Opportunities</h1>
+       
+        <ul id="job-list">
+            <li>Job 1: Software Engineer</li>
+            <li>Job 2: Data Analyst</li>
+            <li>Job 3: Web Developer</li>
+            <li>Job 4: Graphic Designer</li>
+            <li>Job 5: Project Manager</li>
+            <li>Job 6: UX/UI Designer</li>
+            <li>Job 7: Product Manager</li>
+            <li>Job 8: Marketing Specialist</li>
+            <li>Job 9: Systems Analyst</li>
+            <li>Job 10: Sales Manager</li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="search-jobs" class="search-input hidden" placeholder="Search for jobs...">
+           
+        </div>
+            <div class="card-grid" id="job-cards">
+            <div class="card">
+                <h3>Software Engineer</h3>
+                <p><strong>Company:</strong> TechCorp</p>
+                <p><strong>Location:</strong> New York, NY</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> JavaScript, React, Node.js</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>UX Designer</h3>
+                <p><strong>Company:</strong> DesignStudio</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p><strong>Type:</strong> Part-Time</p>
+                <p><strong>Skills Required:</strong> UX Research, Figma, Wireframing</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Data Scientist</h3>
+                <p><strong>Company:</strong> DataLab</p>
+                <p><strong>Location:</strong> Boston, MA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Python, Machine Learning</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Product Manager</h3>
+                <p><strong>Company:</strong> InnovateInc</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Agile, Product Strategy</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Web Developer</h3>
+                <p><strong>Company:</strong> CodeWorks</p>
+                <p><strong>Location:</strong> Seattle, WA</p>
+                <p><strong>Type:</strong> Contract</p>
+                <p><strong>Skills Required:</strong> HTML, CSS, JavaScript</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Marketing Specialist</h3>
+                <p><strong>Company:</strong> MarketMakers</p>
+                <p><strong>Location:</strong> Chicago, IL</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> SEO, SEM</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Graphic Designer</h3>
+                <p><strong>Company:</strong> DesignPros</p>
+                <p><strong>Location:</strong> Los Angeles, CA</p>
+                <p><strong>Type:</strong> Freelance</p>
+                <p><strong>Skills Required:</strong> Adobe Creative Suite</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Systems Analyst</h3>
+                <p><strong>Company:</strong> SysTech</p>
+                <p><strong>Location:</strong> Denver, CO</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> SQL, Business Analysis</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Data Analyst</h3>
+                <p><strong>Company:</strong> DataVision</p>
+                <p><strong>Location:</strong> Miami, FL</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Excel, Data Visualization</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Business Development Manager</h3>
+                <p><strong>Company:</strong> GrowthCo</p>
+                <p><strong>Location:</strong> Philadelphia, PA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Sales, Negotiation</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Cloud Engineer</h3>
+                <p><strong>Company:</strong> Cloudify</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> AWS, Azure</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Technical Writer</h3>
+                <p><strong>Company:</strong> WriteTech</p>
+                <p><strong>Location:</strong> Seattle, WA</p>
+                <p><strong>Type:</strong> Contract</p>
+                <p><strong>Skills Required:</strong> Documentation, Technical Knowledge</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Database Administrator</h3>
+                <p><strong>Company:</strong> DataMasters</p>
+                <p><strong>Location:</strong> Boston, MA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> SQL, Database Management</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Network Engineer</h3>
+                <p><strong>Company:</strong> NetWorks</p>
+                <p><strong>Location:</strong> San Diego, CA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Networking, Security</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Product Designer</h3>
+                <p><strong>Company:</strong> DesignX</p>
+                <p><strong>Location:</strong> New York, NY</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Design Thinking, Prototyping</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Cybersecurity Analyst</h3>
+                <p><strong>Company:</strong> SecureTech</p>
+                <p><strong>Location:</strong> Chicago, IL</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Threat Analysis, Risk Management</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>System Administrator</h3>
+                <p><strong>Company:</strong> ITSolutions</p>
+                <p><strong>Location:</strong> Miami, FL</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> System Maintenance, Troubleshooting</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Front-End Developer</h3>
+                <p><strong>Company:</strong> WebGenius</p>
+                <p><strong>Location:</strong> Denver, CO</p>
+                <p><strong>Type:</strong> Contract</p>
+                <p><strong>Skills Required:</strong> HTML, CSS, JavaScript</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Back-End Developer</h3>
+                <p><strong>Company:</strong> DevHub</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Node.js, Python</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Business Analyst</h3>
+                <p><strong>Company:</strong> BusinessPro</p>
+                <p><strong>Location:</strong> Philadelphia, PA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Business Process, Data Analysis</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>SEO Specialist</h3>
+                <p><strong>Company:</strong> SEOExperts</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p><strong>Type:</strong> Part-Time</p>
+                <p><strong>Skills Required:</strong> Keyword Research, Link Building</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>DevOps Engineer</h3>
+                <p><strong>Company:</strong> DevOpsTech</p>
+                <p><strong>Location:</strong> Los Angeles, CA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> CI/CD, Docker</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Quality Assurance Tester</h3>
+                <p><strong>Company:</strong> QAPro</p>
+                <p><strong>Location:</strong> Seattle, WA</p>
+                <p><strong>Type:</strong> Contract</p>
+                <p><strong>Skills Required:</strong> Testing, Bug Tracking</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Data Engineer</h3>
+                <p><strong>Company:</strong> DataWorks</p>
+                <p><strong>Location:</strong> Boston, MA</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> ETL, Big Data</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>IT Support Specialist</h3>
+                <p><strong>Company:</strong> TechHelp</p>
+                <p><strong>Location:</strong> Chicago, IL</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Technical Support, Problem Solving</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>AI Engineer</h3>
+                <p><strong>Company:</strong> AIWorks</p>
+                <p><strong>Location:</strong> New York, NY</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Machine Learning, TensorFlow</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Cloud Architect</h3>
+                <p><strong>Company:</strong> CloudMasters</p>
+                <p><strong>Location:</strong> Denver, CO</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Cloud Platforms, Architecture Design</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Sales Engineer</h3>
+                <p><strong>Company:</strong> SalesTech</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Full-Time</p>
+                <p><strong>Skills Required:</strong> Sales, Technical Knowledge</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for 20 job cards -->
+    </div>
+
+    <div id="internship-content" class="content-section">
+        <h1>Internship Opportunities</h1>
+        
+        <ul id="internship-list">
+            <li>Internship 1: Software Engineering Intern</li>
+            <li>Internship 2: Marketing Intern</li>
+            <li>Internship 3: Data Science Intern</li>
+            <li>Internship 4: Graphic Design Intern</li>
+            <li>Internship 5: HR Intern</li>
+            <li>Internship 6: Product Management Intern</li>
+            <li>Internship 7: Sales Intern</li>
+            <li>Internship 8: Business Analyst Intern</li>
+            <li>Internship 9: Web Development Intern</li>
+            <li>Internship 10: UX/UI Design Intern</li>
+        </ul>
+        <div class="search-container">
+           
+            <input type="text" id="search-internships" class="search-input hidden" placeholder="Search for internships...">
+        </div>
+        <div class="card-grid" id="internship-cards">
+            <!-- Example Internship Cards -->
+            <div class="card">
+                <h3>Graphic Design Intern</h3>
+                <p><strong>Company:</strong> DesignStudio</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Adobe Photoshop, Illustrator</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Marketing Intern</h3>
+                <p><strong>Company:</strong> MarketGuru</p>
+                <p><strong>Location:</strong> Boston, MA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> SEO, Content Creation, Google Analytics</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <!-- More internship cards can be added here -->
+            <div class="card">
+                <h3>Graphic Design Intern</h3>
+                <p><strong>Company:</strong> DesignStudio</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Adobe Photoshop, Illustrator</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Marketing Intern</h3>
+                <p><strong>Company:</strong> MarketGuru</p>
+                <p><strong>Location:</strong> Boston, MA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> SEO, Content Creation</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Web Development Intern</h3>
+                <p><strong>Company:</strong> WebWorks</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> HTML, CSS, JavaScript</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Business Development Intern</h3>
+                <p><strong>Company:</strong> GrowthCo</p>
+                <p><strong>Location:</strong> Philadelphia, PA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Sales, Market Research</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Software Engineering Intern</h3>
+                <p><strong>Company:</strong> TechLabs</p>
+                <p><strong>Location:</strong> Seattle, WA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Python, Java</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Data Science Intern</h3>
+                <p><strong>Company:</strong> DataX</p>
+                <p><strong>Location:</strong> San Diego, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> R, SQL</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Product Management Intern</h3>
+                <p><strong>Company:</strong> InnovateInc</p>
+                <p><strong>Location:</strong> New York, NY</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Project Management, Market Analysis</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>IT Support Intern</h3>
+                <p><strong>Company:</strong> ITSupportCo</p>
+                <p><strong>Location:</strong> Miami, FL</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Technical Support, Customer Service</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Cybersecurity Intern</h3>
+                <p><strong>Company:</strong> SecureTech</p>
+                <p><strong>Location:</strong> Chicago, IL</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Security Fundamentals, Risk Assessment</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Sales Intern</h3>
+                <p><strong>Company:</strong> SalesForce</p>
+                <p><strong>Location:</strong> Denver, CO</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Sales Techniques, CRM</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Content Creation Intern</h3>
+                <p><strong>Company:</strong> ContentCo</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Writing, Editing</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Social Media Intern</h3>
+                <p><strong>Company:</strong> SocialBuzz</p>
+                <p><strong>Location:</strong> San Francisco, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Social Media Management, Content Planning</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Research Intern</h3>
+                <p><strong>Company:</strong> ResearchLabs</p>
+                <p><strong>Location:</strong> Philadelphia, PA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Data Collection, Analysis</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>UX/UI Design Intern</h3>
+                <p><strong>Company:</strong> UXDesign</p>
+                <p><strong>Location:</strong> Los Angeles, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> User Experience, Prototyping</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Business Analytics Intern</h3>
+                <p><strong>Company:</strong> AnalyticsCo</p>
+                <p><strong>Location:</strong> Seattle, WA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Data Analysis, Reporting</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Product Design Intern</h3>
+                <p><strong>Company:</strong> DesignWorks</p>
+                <p><strong>Location:</strong> New York, NY</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Product Design, Prototyping</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Operations Intern</h3>
+                <p><strong>Company:</strong> OpsCo</p>
+                <p><strong>Location:</strong> San Diego, CA</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Operations Management, Logistics</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Data Analytics Intern</h3>
+                <p><strong>Company:</strong> DataLab</p>
+                <p><strong>Location:</strong> Chicago, IL</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Data Visualization, Statistical Analysis</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+            <div class="card">
+                <h3>Technical Support Intern</h3>
+                <p><strong>Company:</strong> TechSupportInc</p>
+                <p><strong>Location:</strong> Austin, TX</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Skills Required:</strong> Troubleshooting, Customer Interaction</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
