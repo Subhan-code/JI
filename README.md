@@ -1,1 +1,1 @@
-# JI
+# JOB and INTERNSHIP PLatform 
